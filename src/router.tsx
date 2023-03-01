@@ -18,6 +18,10 @@ const Loader = (Component) => (props) =>
 
 const Overview = Loader(lazy(() => import('src/content/overview')));
 
+const Login = Loader(lazy(() => import('src/content/auth/login')))
+
+const Register = Loader(lazy(() => import('src/content/auth/register')))
+
 // Dashboards
 
 const Crypto = Loader(lazy(() => import('src/content/dashboards/Crypto')));
@@ -113,6 +117,24 @@ const routes: RouteObject[] = [
             element: <StatusComingSoon />
           }
         ]
+      },
+      {
+        path: '*',
+        element: <Status404 />
+      }
+    ]
+  },
+  {
+    path: 'auth',
+    element: <BaseLayout />,
+    children: [
+      {
+        path: 'login',
+        element: <Login />
+      },
+      {
+        path: 'register',
+        element: <Register />
       },
       {
         path: '*',
