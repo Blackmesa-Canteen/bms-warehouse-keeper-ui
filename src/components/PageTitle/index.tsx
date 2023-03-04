@@ -12,7 +12,7 @@ interface PageTitleProps {
 const PageTitle: FC<PageTitleProps> = ({
   heading = '',
   subHeading = '',
-  docs = '',
+  docs = 'https://www.996workers.icu',
   ...rest
 }) => {
   return (
