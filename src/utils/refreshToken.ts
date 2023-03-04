@@ -12,14 +12,15 @@ const refreshTokenFn = async () => {
       refreshToken: refreshToken,
     });
 
+    // TODO check data structure
     const { session } = response.data;
 
-    if (!session?.accessToken) {
+    if (!session?.data?.token) {
       localStorage.removeItem("session");
       localStorage.removeItem("user");
     }
 
-    localStorage.setItem("session", JSON.stringify(session));
+    localStorage.setItem("session", JSON.stringify(session.data));
 
     return session;
   } catch (error) {
@@ -28,7 +29,7 @@ const refreshTokenFn = async () => {
   }
 };
 
-const maxAge = 10000;
+const maxAge = 30 * 60 * 1000;
 
 export const memoizedRefreshToken = mem(refreshTokenFn, {
   maxAge,

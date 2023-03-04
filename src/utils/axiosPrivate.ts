@@ -7,12 +7,12 @@ axios.interceptors.request.use(
   async (config) => {
     const session = JSON.parse(localStorage.getItem("session"));
 
-    if (session?.accessToken) {
+    if (session?.token) {
       // @ts-ignore
       config.headers = {
         "Content-Type": "application/json",
         ...config.headers,
-        authorization: `Bearer ${session?.accessToken}`,
+        authorization: `Bearer ${session?.token}`,
       };
     }
 
@@ -34,7 +34,7 @@ axios.interceptors.response.use(
       if (result?.data) {
         config.headers = {
           ...config.headers,
-          authorization: `Bearer ${result?.accessToken}`,
+          authorization: `Bearer ${result?.token}`,
         };
       }
 
