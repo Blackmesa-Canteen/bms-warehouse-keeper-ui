@@ -4,13 +4,14 @@ interface Map {
   [key: string]: string | undefined | unknown | Record<string, unknown>;
 }
 
-const Backend_urls: Map = {
+const ApiRequestMap: Map = {
   user: {
     getLogin: `${backend_api_base_url}/user/login`,
     postCreate: `${backend_api_base_url}/user`,
     getById: `${backend_api_base_url}/user`,
     deleteById: `${backend_api_base_url}/user`,
     getAllByPage: `${backend_api_base_url}/user/all`,
+    postRefreshToken: `${backend_api_base_url}/user/refreshToken`,
   },
   category: {
     getById: `${backend_api_base_url}/category`,
@@ -71,4 +72,4 @@ const Backend_urls: Map = {
   },
 };
 
-export default Backend_urls;
+export default ApiRequestMap;
