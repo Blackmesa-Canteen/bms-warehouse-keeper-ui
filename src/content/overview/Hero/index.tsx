@@ -82,7 +82,7 @@ function Hero() {
         <Grid item md={10} lg={8} mx="auto">
           <LabelWrapper color="success">Version 2.0.0</LabelWrapper>
           <TypographyH1 sx={{ mb: 2 }} variant="h1">
-            Tokyo Free White React Typescript Admin Dashboard
+            Black Mesa Warehouse Keeper
           </TypographyH1>
           <TypographyH2
             sx={{ lineHeight: 1.5, pb: 4 }}
@@ -90,9 +90,7 @@ function Hero() {
             color="text.secondary"
             fontWeight="normal"
           >
-            High performance React template built with lots of powerful
-            Material-UI components across multiple product niches for fast &
-            perfect apps development processes
+            Open source project: Tokyo Free White React Typescript Admin Dashboard
           </TypographyH2>
           <Button
             component={RouterLink}
@@ -100,18 +98,18 @@ function Hero() {
             size="large"
             variant="contained"
           >
-            Browse Live Preview
+            Dashboard
           </Button>
           <Button
             sx={{ ml: 2 }}
             component="a"
             target="_blank"
             rel="noopener"
-            href="https://bloomui.com/product/tokyo-free-white-react-typescript-material-ui-admin-dashboard"
+            href="/auth/login"
             size="large"
             variant="text"
           >
-            Key Features
+            Login
           </Button>
           <Grid container spacing={3} mt={5}>
             <Grid item md={6}>
@@ -143,7 +141,7 @@ function Hero() {
                   <b>Built with Typescript</b>
                 </Box>
                 <Typography component="span" variant="subtitle2">
-                  Tokyo Free White features a modern technology stack and is
+                  996workers.icu project and is
                   built with React + Typescript.
                 </Typography>
               </Typography>
